@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#111166"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:background="@android:color/holo_blue_light"
+    tools:context="com.zebra.globalsw.weatherapp.MainActivity">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="1">
+
+        <TableRow>
+            <TextView
+                android:id="@+id/location"
+                android:textColor="#FFFFFF"
+                android:text="Kuala Lumpur, MY"
+                android:textSize="@dimen/text_small"
+                android:textAlignment="textStart"
+                android:gravity="start"
+                />
+            <View
+                android:layout_width="1dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                />
+
+            <Button
+                android:id="@+id/button_refresh"
+                android:text="@string/refresh_button"
+                android:background="@drawable/refresh_button"
+                android:textColor="#FFFFFF"
+                android:textSize="@dimen/text_small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:onClick="onClick"
+                />
+        </TableRow>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="1">
+
+            <TextView
+                android:id="@+id/temperature"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:drawableLeft="@drawable/ic_temperature"
+                android:text="29"
+                android:textColor="#FFFFFF"
+                android:textSize="@dimen/text_medium"
+                android:drawableRight="@drawable/ic_celcius"
+                />
+    </LinearLayout>
+        </TableLayout>
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_centerInParent="true"
+            android:id="@+id/icon_layout"
+            >
+            <ImageView
+                android:id="@+id/icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_launcher_weather"/>
+        </LinearLayout>
+<TableLayout
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/icon_layout"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_vertical_margin"
+    android:paddingRight="@dimen/activity_vertical_margin"
+    android:layout_centerInParent="true"
+    android:stretchColumns="4"
+    >
+
+    <TableRow>
+        <TextView
+            android:id="@+id/wind_speed"
+            android:text="1.5"
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/text_small"
+            android:drawableLeft="@drawable/ic_wind"/>
+
+        <TextView
+            android:id="@+id/humidity"
+            android:text="79%"
+            android:textSize="@dimen/text_small"
+            android:textColor="#FFFFFF"
+            android:drawableLeft="@drawable/ic_humidity"
+            android:paddingLeft="@dimen/activity_vertical_margin"
+            android:paddingRight="@dimen/activity_vertical_margin"
+            />
+
+        <TextView
+            android:id="@+id/cloudiness"
+            android:text="75%"
+            android:textSize="@dimen/text_small"
+            android:textColor="#FFFFFF"
+            android:drawableLeft="@drawable/ic_cloudiness"
+            />
+
+    </TableRow>
+</TableLayout>
+    <TextView
+        android:textSize="@dimen/text_small"
+        android:textColor="#FFFFFF"
+        android:text="CREDIT Climacons by @adamwhitcroft"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_alignParentBottom="true"
+        />
+</RelativeLayout>
